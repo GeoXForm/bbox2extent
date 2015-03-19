@@ -19,7 +19,7 @@ var extent = bbox2extent(bbox)
 
 // OR
 
-bbox2extent(function (err, extent) {
+bbox2extent(bbox, function (err, extent) {
   if (err) throw err
 
   console.log(extent)
