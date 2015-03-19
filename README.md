@@ -11,7 +11,7 @@ npm install bbox2extent
 
 ## Usage
 
-```
+```js
 var bbox2extent = require('bbox2exent')
 var bbox = [100, 0, 105, 1]
 
@@ -34,6 +34,7 @@ bbox2extent(function (err, extent) {
   //   }
   // }
 })
+```
 
 ## License
 
