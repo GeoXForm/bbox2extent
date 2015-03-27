@@ -1,7 +1,7 @@
 {
   "name": "bbox2extent",
   "description": "Transform a GeoJSON bounding box into an Esri-formatted extent object.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Nate Goldman <nate@ngoldman.me>",
   "bugs": {
     "url": "https://github.com/ngoldman/bbox2extent/issues"
@@ -22,9 +22,11 @@
     "url": "https://github.com/ngoldman/bbox2extent.git"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard && node test | tap-spec"
   },
   "devDependencies": {
-    "standard": "^3.2.0"
+    "standard": "^3.2.0",
+    "tap-spec": "^2.2.2",
+    "tape": "^3.5.0"
   }
 }
