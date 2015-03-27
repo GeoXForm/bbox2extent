@@ -16,8 +16,18 @@ var bbox2extent = require('bbox2exent')
 var bbox = [100, 0, 105, 1]
 
 var extent = bbox2extent(bbox)
+// {
+//   xmin: 100,
+//   ymin: 0,
+//   xmax: 105,
+//   ymax: 1,
+//   spatialReference: {
+//     wkid: 4326,
+//     latestWkid: 4326
+//   }
+// }
 
-// OR
+// -- OR --
 
 bbox2extent(bbox, function (err, extent) {
   if (err) throw err
@@ -54,7 +64,7 @@ var extent = {
 var bbox = extent2bbox(extent)
 // [ -108.9395, 37.084968, -102, 40.8877 ]
 
-// OR
+// -- OR --
 
 extent2bbox(extent, function (err, bbox) {
   if (err) throw err
