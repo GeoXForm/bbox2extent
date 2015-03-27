@@ -36,6 +36,42 @@ bbox2extent(bbox, function (err, extent) {
 })
 ```
 
+Also supports reverse operation (converting an extent to a bounding box) via `reverse`:
+
+```
+var extent2bbox = require('bbox2extent').reverse
+var extent = {
+  xmin: -108.9395,
+  ymin: 37.084968,
+  xmax: -102,
+  ymax: 40.8877,
+  spatialReference: {
+    wkid: 4326,
+    latestWkid: 4326
+  }
+}
+
+var bbox = extent2bbox(extent)
+// [ -108.9395, 37.084968, -102, 40.8877 ]
+
+// OR
+
+extent2bbox(extent, function (err, bbox) {
+  if (err) throw err
+
+  console.log(bbox)
+  // [ -108.9395, 37.084968, -102, 40.8877 ]
+})
+```
+
+## Contributing
+
+`bbox2extent` is an **OPEN Open Source Project**. This means that:
+
+> Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
+
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
+
 ## License
 
 [ISC](LICENSE.md)
