@@ -38,7 +38,7 @@ bbox2extent(bbox, function (err, extent) {
 
 Also supports reverse operation (converting an extent to a bounding box) via `reverse`:
 
-```
+```js
 var extent2bbox = require('bbox2extent').reverse
 var extent = {
   xmin: -108.9395,
