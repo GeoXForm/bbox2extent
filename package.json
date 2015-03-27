@@ -25,7 +25,7 @@
     "test": "standard && node test | tap-spec"
   },
   "devDependencies": {
-    "standard": "^3.2.0",
+    "standard": "^3.3.0",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
   }

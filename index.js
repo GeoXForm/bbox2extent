@@ -7,10 +7,7 @@ function bbox2extent (bbox, callback) {
   if (!isArray || !isValid) {
     var err = 'invalid bbox array'
     if (callback) return callback(err)
-    else {
-      console.error(err)
-      return
-    }
+    else return console.error(err)
   }
 
   var extent = {
@@ -38,10 +35,7 @@ function extent2bbox (extent, callback) {
   if (!isObject || !isValid) {
     var err = 'invalid extent object'
     if (callback) return callback(err)
-    else {
-      console.error(err)
-      return
-    }
+    else return console.error(err)
   }
 
   var bbox = [extent.xmin, extent.ymin, extent.xmax, extent.ymax]
