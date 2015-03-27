@@ -1,23 +1,53 @@
-module.exports = function (bbox, callback) {
+module.exports = bbox2extent
+
+function bbox2extent (bbox, callback) {
   var isArray = Object.prototype.toString.call(bbox) === '[object Array]'
-  var isLongEnough = bbox.length === 4
+  var isValid = bbox.length === 4
 
-  if (!isArray || !isLongEnough) {
-    var err = 'invalid bbox object'
-    return callback(err)
-  }
-
-  var extent = {
-    'xmin': bbox[0],
-    'ymin': bbox[1],
-    'xmax': bbox[2],
-    'ymax': bbox[3],
-    'spatialReference': {
-      'wkid': 4326,
-      'latestWkid': 4326
+  if (!isArray || !isValid) {
+    var err = 'invalid bbox array'
+    if (callback) return callback(err)
+    else {
+      console.error(err)
+      return
     }
   }
 
-  if (callback) callback(null, extent)
+  var extent = {
+    xmin: bbox[0],
+    ymin: bbox[1],
+    xmax: bbox[2],
+    ymax: bbox[3],
+    spatialReference: {
+      wkid: 4326,
+      latestWkid: 4326
+    }
+  }
+
+  if (callback) return callback(null, extent)
   else return extent
 }
+
+function extent2bbox (extent, callback) {
+  var isObject = Object.prototype.toString.call(extent) === '[object Object]'
+  var isValid = extent.xmin !== undefined &&
+    extent.ymin !== undefined &&
+    extent.xmax !== undefined &&
+    extent.ymax !== undefined
+
+  if (!isObject || !isValid) {
+    var err = 'invalid extent object'
+    if (callback) return callback(err)
+    else {
+      console.error(err)
+      return
+    }
+  }
+
+  var bbox = [extent.xmin, extent.ymin, extent.xmax, extent.ymax]
+
+  if (callback) return callback(null, bbox)
+  else return bbox
+}
+
+bbox2extent.reverse = extent2bbox
