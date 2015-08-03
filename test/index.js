@@ -24,22 +24,40 @@ var extentPortlandParks = {
   }
 }
 
-test('bbox2extent null island', function (t) {
+test('bbox2extent: null island', function (t) {
   t.deepEqual(bbox2extent(bboxNull), extentNull)
   t.end()
 })
 
-test('bbox2extent portland parks', function (t) {
+test('bbox2extent: portland parks', function (t) {
   t.deepEqual(bbox2extent(bboxPortlandParks), extentPortlandParks)
   t.end()
 })
 
-test('extent2bbox null island', function (t) {
+test('bbox2extent: invalid bbox array error', function (t) {
+  bbox2extent(extentPortlandParks, function (err, extent) {
+    t.ok(err instanceof Error, 'returns a valid error object')
+    t.equal(err.message, 'invalid bbox array', 'returns correct error message')
+    t.notOk(extent, 'does not return extent')
+    t.end()
+  })
+})
+
+test('extent2bbox: null island', function (t) {
   t.deepEqual(extent2bbox(extentNull), bboxNull)
   t.end()
 })
 
-test('extent2bbox portland parks', function (t) {
+test('extent2bbox: portland parks', function (t) {
   t.deepEqual(extent2bbox(extentPortlandParks), bboxPortlandParks)
   t.end()
+})
+
+test('extent2bbox: invalid extent object error', function (t) {
+  extent2bbox(bboxPortlandParks, function (err, extent) {
+    t.ok(err instanceof Error, 'returns a valid error object')
+    t.equal(err.message, 'invalid extent object', 'returns correct error message')
+    t.notOk(extent, 'does not return extent')
+    t.end()
+  })
 })
