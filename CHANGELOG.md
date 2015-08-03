@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 * Moved to `koopjs` org
 
-## [1.1.0]
+## [1.1.0] - 2015-03-27
 
 ### Added
 * add support for reverse operation ([#2](https://github.com/ngoldman/bbox2extent/issues/2))
@@ -20,10 +20,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 * add better error handling for non-callback style
 
-## [1.0.1]
+## [1.0.1] - 2015-03-19
 * fix usage error in readme
 
-## 1.0.0
+## 1.0.0 - 2015-03-19
 * first implementation
 
 [1.1.0]: https://github.com/koopjs/bbox2extent/compare/v1.0.1...v1.1.0
