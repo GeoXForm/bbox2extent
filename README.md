@@ -84,4 +84,4 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
 ## License
 
-[ISC](LICENSE.md)
+[ISC](LICENSE)
