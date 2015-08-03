@@ -1,7 +1,7 @@
 # bbox2extent
 
 [![](https://img.shields.io/npm/v/bbox2extent.svg?style=flat-square)](https://www.npmjs.com/package/bbox2extent)
-[![](https://img.shields.io/travis/ngoldman/bbox2extent.svg?style=flat-square)](https://travis-ci.org/ngoldman/bbox2extent)
+[![](https://img.shields.io/travis/koopjs/bbox2extent.svg?style=flat-square)](https://travis-ci.org/koopjs/bbox2extent)
 
 Transform a GeoJSON bounding box into an Esri-formatted extent object.
 
