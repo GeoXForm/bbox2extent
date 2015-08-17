@@ -76,6 +76,8 @@ extent2bbox(extent, function (err, bbox) {
 })
 ```
 
+**Caveat**: only works for wkid 4326 (WGS 1984). No conversion between projections is happening, just mapping one object format to another.
+
 ## Contributing
 
 `bbox2extent` is an **OPEN Open Source Project**. This means that:
