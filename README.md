@@ -3,7 +3,7 @@
 > Transform a GeoJSON bounding box into an Esri-formatted extent object.
 
 [![](https://img.shields.io/npm/v/bbox2extent.svg?style=flat-square)](https://www.npmjs.com/package/bbox2extent)
-[![](https://img.shields.io/travis/koopjs/bbox2extent.svg?style=flat-square)](https://travis-ci.org/koopjs/bbox2extent)
+[![](https://img.shields.io/travis/GeoXForm/bbox2extent.svg?style=flat-square)](https://travis-ci.org/GeoXForm/bbox2extent)
 
 ## Install
 
